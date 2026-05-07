@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/home_page.dart';
+import 'package:luis_poma_s1/home_page.dart';
 
 void main() {
   runApp(const MyApp());
