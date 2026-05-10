@@ -27,10 +27,19 @@ class HomePage extends StatelessWidget{
           const Text ("Cedula: 1104657645"),
           const Text ("Carrera: TIC´s"),
 
-        ]
-        
+          Image.network(
+            "https://wallup.net/wp-content/uploads/2016/05/02/88636-Neymar-FC_Barcelona.jpg",
+            height: 150,
+          ),
 
-      )
+          ElevatedButton(
+            onPressed: () {
+              debugPrint("Boton presionado");
+            },
+            child: const Text("Presioname"),
+          ),
+        ],        
+      ),
     );
   }
 }
