@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget{
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text ("Tarea 1"),
+        title: const Text("Tarea 1"),
         foregroundColor: Colors.white,
         backgroundColor: Colors.red,
         actions: [
@@ -17,15 +17,15 @@ class HomePage extends StatelessWidget{
               debugPrint("Icono de informacion presionado");
             },
           ),
-        ]
+        ],
       ),
 
       body: ListView(
         padding: const EdgeInsets.all(16),
-        children : [
-          const Text ("Nombre: Luis Poma"),
-          const Text ("Cedula: 1104657645"),
-          const Text ("Carrera: TIC´s"),
+        children: [
+          const Text("Nombre: Luis Poma"),
+          const Text("Cedula: 1104657645"),
+          const Text("Carrera: TIC´s"),
 
           Image.network(
             "https://wallup.net/wp-content/uploads/2016/05/02/88636-Neymar-FC_Barcelona.jpg",
@@ -38,7 +38,29 @@ class HomePage extends StatelessWidget{
             },
             child: const Text("Presioname"),
           ),
-        ],        
+
+          Card(
+            elevation: 8,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.all(16),
+              child: Text("card personalizad"),
+            ),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text("Snackabar Personalizado"),
+              duration: Duration(seconds: 2),
+            ),
+          );
+        },
+        child: const Icon(Icons.message),
       ),
     );
   }
