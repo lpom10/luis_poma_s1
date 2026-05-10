@@ -12,8 +12,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 's1 activa 2',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: HomePage(),
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        scaffoldBackgroundColor: Colors.grey[200],
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          bodyMedium: TextStyle(fontSize: 16, color: Colors.black87),
+          ),
+        ),
+      home: const HomePage(),
     );
   }
 }

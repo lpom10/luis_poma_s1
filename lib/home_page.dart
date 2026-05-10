@@ -7,32 +7,28 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Actividad en clase"),
-        backgroundColor: Colors.red,
+        title: const Text ("Tarea 1"),
         foregroundColor: Colors.white,
-      ),
-
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CircleAvatar(
-            radius: 50,
-            backgroundColor: Colors.red,
-            child: Icon(Icons.person, size: 60, color: Colors.white),          
-          ),
-          
-          SizedBox(height: 20,),
-          Text("Hello bro", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
-
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.email, color: Colors.red,),
-              SizedBox(width: 10,),
-              Text("lupomame@uide.edu.ec")
-            ],
+        backgroundColor: Colors.red,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info),
+            onPressed: () {
+              debugPrint("Icono de informacion presionado");
+            },
           ),
         ]
+      ),
+
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children : [
+          const Text ("Nombre: Luis Poma"),
+          const Text ("Cedula: 1104657645"),
+          const Text ("Carrera: TIC´s"),
+
+        ]
+        
 
       )
     );
